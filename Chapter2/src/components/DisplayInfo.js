@@ -1,4 +1,5 @@
 import React from "react";
+import './DisplayInfo.scss';
 class DisplayInfo extends React.Component {
     state = {
         isShowListUser: true
@@ -12,7 +13,7 @@ class DisplayInfo extends React.Component {
         // destructuring props
         const { listUsers } = this.props; // object
         return (
-            <div>
+            <div className='display-info-container'>
                 <div>
                     <span onClick={() => { this.handleShowHide() }}>
                         {this.state.isShowListUser === true ? 'Hide list user' : 'Show list user'}
@@ -23,7 +24,7 @@ class DisplayInfo extends React.Component {
                         {listUsers.map((user, index) => {
                             return (
                                 <div key={user.id} className={+user.age >= 18 ? 'green' : 'red'}>
-                                    <div>My name is {user.name}</div>
+                                    <div style={{ color: 'red', paddingTop: '50px' }}>My name is {user.name}</div>
                                     <div>I'm {user.age} years old</div>
                                 </div>
                             )
