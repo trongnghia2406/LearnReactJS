@@ -13,6 +13,7 @@ class DisplayInfo extends React.Component {
     render() {
         // destructuring props
         const { listUsers } = this.props; // object
+        // template + logic js
         return (
             <div className='display-info-container'>
                 <img src={logo} />
